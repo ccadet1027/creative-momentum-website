@@ -1,1346 +1,1342 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Momentum - Finish without burning out</title>
-    <meta name="description" content="A creative guide for the sensitive, ambitious, and stuck. Overcome perfectionism and finish your projects without burnout.">
-    
-    <!-- Google Fonts - Inter for clean, gentle typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- MailerLite Universal -->
-    <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '1662371');
-    </script>
-    <!-- End MailerLite Universal -->
-
-<style>
-/* ===== EMBEDDED CSS ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #4a5568;
-    background-color: #f7f5f3;
-    overflow-x: hidden;
-}
-
-/* ===== NAVIGATION ===== */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.nav-brand h1 {
-    color: #8fa68e;
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #4a5568;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #8fa68e;
-}
-
-.nav-cta {
-    background: #d4a574;
-    color: white;
-    text-decoration: none;
-    padding: 8px 20px;
-    border-radius: 25px;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    border: 2px solid #d4a574;
-}
-
-.nav-cta:hover {
-    background: transparent;
-    color: #d4a574;
-    transform: translateY(-2px);
-}
-
-.mobile-menu-button {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #4a5568;
-    cursor: pointer;
-}
-
-/* ===== HERO SECTION ===== */
-.hero {
-    padding: 120px 0 80px;
-    background: linear-gradient(135deg, #f0ede8 0%, #e8e3dd 100%);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.guide-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #d4a574 0%, #c79660 100%);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
-    margin-bottom: 1.5rem;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    color: #4a5568;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-}
-
-.hero-text > p {
-    font-size: 1.25rem;
-    color: #7a7a7a;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-}
-
-.hero-subtext {
-    font-size: 1.1rem;
-    color: #7a7a7a;
-    margin-bottom: 2.5rem;
-    line-height: 1.7;
-}
-
-.hero-ctas {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.cta-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    padding: 16px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.cta-button.primary {
-    background: #d4a574;
-    color: white;
-    border-color: #d4a574;
-}
-
-.cta-button.primary:hover {
-    background: #c79660;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
-}
-
-.cta-button.secondary {
-    background: transparent;
-    color: #8fa68e;
-    border-color: #8fa68e;
-}
-
-.cta-button.secondary:hover {
-    background: #8fa68e;
-    color: white;
-    transform: translateY(-3px);
-}
-
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.guide-cover {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.guide-cover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.2);
-}
-
-/* ===== SECTION STYLES ===== */
-.section-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.guide-section,
-.movement-section,
-.freebie-section,
-.reviews-section,
-.download-section {
-    padding: 80px 0;
-}
-
-.guide-section {
-    background: white;
-}
-
-.movement-section {
-    background: #f0ede8;
-}
-
-.freebie-section {
-    background: linear-gradient(135deg, #f7f5f3 0%, #f0ede8 100%);
-    border-top: 1px solid rgba(212, 165, 116, 0.1);
-}
-
-.reviews-section {
-    background: white;
-    border-top: 1px solid rgba(143, 166, 142, 0.1);
-}
-
-.download-section {
-    background: linear-gradient(135deg, #b09c94 0%, #a08a7e 100%);
-    color: white;
-}
-
-/* ===== GUIDE SECTION ===== */
-.guide-section h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    color: #4a5568;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-.guide-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.feature {
-    text-align: center;
-    padding: 2rem;
-}
-
-.feature i {
-    font-size: 2.5rem;
-    color: #8fa68e;
-    margin-bottom: 1.5rem;
-}
-
-.feature h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #4a5568;
-    margin-bottom: 1rem;
-}
-
-.feature p {
-    color: #7a7a7a;
-    line-height: 1.6;
-}
-
-.guide-ctas {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* ===== MOVEMENT SECTION ===== */
-.movement-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    margin-bottom: 4rem;
-}
-
-.movement-section h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    color: #4a5568;
-    margin-bottom: 1.5rem;
-}
-
-.movement-intro {
-    font-size: 1.2rem;
-    color: #7a7a7a;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
-.movement-values {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.value-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.value-item:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-2px);
-}
-
-.value-item i {
-    font-size: 1.5rem;
-    color: #8fa68e;
-}
-
-.value-item span {
-    font-weight: 500;
-    color: #4a5568;
-}
-
-.movement-quote {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #7a7a7a;
-    text-align: center;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    border-left: 4px solid #d4a574;
-}
-
-.movement-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.neon-image {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.neon-image:hover {
-    transform: scale(1.02);
-}
-
-/* ===== FREEBIE SECTION ===== */
-.freebie-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.freebie-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.completion-preview {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.completion-preview:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.2);
-}
-
-.freebie-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #8fa68e 0%, #7a8f7e 100%);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-}
-
-.freebie-text h2 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    font-weight: 700;
-    color: #4a5568;
-    margin-bottom: 1.5rem;
-}
-
-.freebie-description {
-    font-size: 1.1rem;
-    color: #7a7a7a;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
-.freebie-features {
-    margin-bottom: 2rem;
-}
-
-.feature-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    color: #4a5568;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* MailerLite Form Styling */
-.ml-form-wrapper {
-    background: white;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border: 2px solid rgba(212, 165, 116, 0.1);
-    margin-top: 2rem;
-}
-
-.ml-form-wrapper input[type="text"],
-.ml-form-wrapper input[type="email"] {
-    width: 100%;
-    padding: 16px 24px;
-    border: 2px solid #e8e3dd;
-    border-radius: 50px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-    background-color: #f7f5f3;
-    color: #4a5568;
-}
-
-.ml-form-wrapper input[type="text"]:focus,
-.ml-form-wrapper input[type="email"]:focus {
-    outline: none;
-    border-color: #d4a574;
-    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
-}
-
-.ml-form-wrapper input::placeholder {
-    color: #a0a0a0;
-}
-
-.ml-form-buttons .cta-button {
-    width: 100%;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.privacy-note {
-    text-align: center;
-    margin-top: 1rem;
-    color: #7a7a7a;
-    font-size: 0.9rem;
-}
-
-.privacy-note i {
-    margin-right: 0.5rem;
-    color: #8fa68e;
-}
-
-/* ===== REVIEWS SECTION ===== */
-.reviews-section h2 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    font-weight: 700;
-    color: #4a5568;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.review-card {
-    background: #f7f5f3;
-    border-radius: 15px;
-    padding: 2rem;
-    border: 2px solid rgba(212, 165, 116, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.review-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border-color: rgba(212, 165, 116, 0.3);
-}
-
-.review-card .stars {
-    display: flex;
-    gap: 0.2rem;
-    margin-bottom: 1rem;
-    color: #fbbf24;
-}
-
-.review-card p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #4a5568;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-}
-
-.reviewer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-}
-
-.reviewer-info strong {
-    font-weight: 600;
-    color: #4a5568;
-    font-size: 1rem;
-}
-
-.reviewer-info span {
-    color: #7a7a7a;
-    font-size: 0.9rem;
-}
-
-/* ===== DOWNLOAD SECTION ===== */
-.download-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    text-align: left;
-}
-
-.download-section h2 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    margin-bottom: 1rem;
-    color: white;
-}
-
-.download-intro {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-bottom: 3rem;
-    color: white;
-}
-
-.guide-value h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: white;
-}
-
-.value-items {
-    margin-bottom: 2rem;
-}
-
-.value-item {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-    line-height: 1.4;
-}
-
-.pricing {
-    margin: 2rem 0;
-}
-
-.price {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #d4a574;
-    margin-bottom: 0.5rem;
-}
-
-.price-note {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-}
-
-.download-ctas {
-    margin-bottom: 1rem;
-}
-
-.cta-button.large {
-    padding: 20px 40px;
-    font-size: 1.1rem;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.guarantee {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-    margin: 0;
-    text-align: center;
-}
-
-.guarantee i {
-    margin-right: 0.5rem;
-    color: #d4a574;
-}
-
-.download-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.guide-preview {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.guide-preview:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4);
-}
-
-/* ===== FOOTER ===== */
-.footer {
-    background: #4a453e;
-    color: white;
-    padding: 60px 0 20px;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    margin-bottom: 2rem;
-}
-
-.footer-brand h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #d4a574;
-}
-
-.footer-brand p {
-    color: #c7c2bd;
-    line-height: 1.6;
-}
-
-.footer-links {
-    display: flex;
-    gap: 3rem;
-}
-
-.footer-links a {
-    color: #c7c2bd;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #d4a574;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #665e57;
-    color: #c7c2bd;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 3rem;
-    }
-    
-    .movement-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-    
-    .movement-values {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .freebie-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-    
-    .download-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links a:not(.nav-cta) {
-        display: none;
-    }
-    
-    .mobile-menu-button {
-        display: block;
-    }
-    
-    .hero {
-        padding: 100px 0 60px;
-    }
-    
-    .hero-ctas {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .cta-button {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-    
-    .guide-section,
-    .movement-section,
-    .download-section,
-    .freebie-section {
-        padding: 60px 0;
-    }
-    
-    .movement-values {
-        grid-template-columns: 1fr;
-    }
-    
-    .reviews-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .footer-links {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-content {
-        padding: 0 15px;
-    }
-    
-    .hero-content,
-    .footer-content {
-        padding: 0 15px;
-    }
-    
-    .nav-container {
-        padding: 0 15px;
-    }
-    
-    .guide-features {
-        grid-template-columns: 1fr;
-    }
-    
-    .ml-form-wrapper {
-        padding: 1.5rem;
-    }
-}
-</style>
-
-</head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <h1>Creative Momentum</h1>
-            </div>
-            <div class="nav-links">
-                <a href="#guide">The Guide</a>
-                <a href="#movement">Our Movement</a>
-                <a href="#freebie">Free Completion Plan</a>
-                <a href="#download" class="cta-button nav-cta">Full Guide</a>
-            </div>
-            <button class="mobile-menu-button">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="guide-badge">PDF DOWNLOAD</div>
-                    <h1>Finish without burning out.</h1>
-                    <p>A creative guide for the sensitive, ambitious, and stuck.</p>
-                    
-                    <p class="hero-subtext">
-                        From Perfectionism to Creative Freedom is a step-by-step digital guide for 
-                        sensitive and neurodivergent creatives who start projects but rarely finish them.
-                    </p>
-                    
-                    <div class="hero-ctas">
-                        <a href="#freebie" class="cta-button secondary">Start with Free Worksheet</a>
-                        <a href="#download" class="cta-button primary">Get Full Guide</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://gfrxhozi.gensparkspace.com/assets/ebook-cover-clean.jpg" alt="From Perfectionism to Creative Freedom Guide Cover" class="guide-cover">
-                </div>
-            </div>
-        </section>
-
-        <section id="guide" class="guide-section">
-            <div class="section-content">
-                <h2>What you'll get in this guide:</h2>
-                
-                <div class="guide-features">
-                    <div class="feature">
-                        <i class="fas fa-clipboard-check"></i>
-                        <h3>Worksheets and reflection prompts</h3>
-                        <p>Practical exercises to help you understand your creative patterns and breakthrough blocks.</p>
-                    </div>
-                    
-                    <div class="feature">
-                        <i class="fas fa-volume-mute"></i>
-                        <h3>Tools to quiet the inner critic</h3>
-                        <p>Evidence-based strategies to manage perfectionist thinking and self-doubt.</p>
-                    </div>
-                    
-                    <div class="feature">
-                        <i class="fas fa-heart"></i>
-                        <h3>A trauma-aware completion framework</h3>
-                        <p>Gentle approaches that honor your nervous system and creative process.</p>
-                    </div>
-                    
-                    <div class="feature">
-                        <i class="fas fa-turtle"></i>
-                        <h3>Permission to move at your own pace — and still finish</h3>
-                        <p>Sustainable methods that work with your sensitivity, not against it.</p>
-                    </div>
-                </div>
-                
-                <div class="guide-ctas">
-                    <a href="#freebie" class="cta-button secondary">Start with Free Worksheet</a>
-                    <a href="#download" class="cta-button primary">Get Full Guide</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="movement" class="movement-section">
-            <div class="section-content">
-                <div class="movement-content">
-                    <div class="movement-text">
-                        <h2>Our Movement</h2>
-                        <p class="movement-intro">
-                            We're building a community of sensitive and neurodivergent creatives who refuse to let perfectionism steal their dreams.
-                        </p>
-                        
-                        <div class="movement-values">
-                            <div class="value-item">
-                                <i class="fas fa-seedling"></i>
-                                <span>Growth over perfection</span>
-                            </div>
-                            <div class="value-item">
-                                <i class="fas fa-users"></i>
-                                <span>Community over competition</span>
-                            </div>
-                            <div class="value-item">
-                                <i class="fas fa-heart"></i>
-                                <span>Compassion over criticism</span>
-                            </div>
-                            <div class="value-item">
-                                <i class="fas fa-rocket"></i>
-                                <span>Progress over perfection</span>
-                            </div>
-                        </div>
-                        
-                        <p class="movement-quote">
-                            "Done is better than perfect, and imperfect action creates more momentum than perfect inaction."
-                        </p>
-                    </div>
-                    
-                    <div class="movement-visual">
-                        <img src="https://gfrxhozi.gensparkspace.com/assets/neon-sign.jpg" alt="It's gonna NOT be okay - Creative authenticity" class="neon-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="freebie" class="freebie-section">
-            <div class="section-content">
-                <div class="freebie-content">
-                    <div class="freebie-image">
-                        <img src="https://gfrxhozi.gensparkspace.com/assets/completion-plan-preview.png" alt="Creative Completion Plan Preview" class="completion-preview">
-                    </div>
-                    
-                    <div class="freebie-text">
-                        <div class="freebie-badge">FREE WORKSHEET</div>
-                        <h2>Creative Completion Plan</h2>
-                        <p class="freebie-description">
-                            Get our most popular worksheet that helps you map out your project from start to finish, 
-                            with built-in flexibility for your sensitive creative process.
-                        </p>
-                        
-                        <div class="freebie-features">
-                            <div class="feature-item">✨ Project breakdown templates</div>
-                            <div class="feature-item">🎯 Gentle goal-setting framework</div>
-                            <div class="feature-item">🛡️ Perfectionism checkpoints</div>
-                            <div class="feature-item">💝 Self-compassion reminders</div>
-                        </div>
-                        
-                        <div class="ml-form-wrapper">
-                            <div class="ml-form-container">
-                                <div class="ml-form" id="form_1234567">
-                                    <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/abc123" method="post" target="_blank">
-                                        <div class="ml-form-formContent">
-                                            <div class="ml-form-fieldRow">
-                                                <div class="ml-field-group ml-field-name">
-                                                    <input type="text" name="fields[name]" placeholder="Your name" required>
-                                                </div>
-                                                <div class="ml-field-group ml-field-email">
-                                                    <input type="email" name="fields[email]" placeholder="Your email" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ml-form-buttons">
-                                            <button type="submit" class="cta-button primary">
-                                                Get Free Completion Plan
-                                            </button>
-                                        </div>
-                                        <input type="hidden" name="ml-submit" value="1">
-                                        <div style="display: none;">
-                                            <input type="text" name="fields[gdpr_compliance]" tabindex="-1" value="" autocomplete="off">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <p class="privacy-note">
-                            <i class="fas fa-lock"></i>
-                            We respect your inbox. Unsubscribe anytime.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="reviews-section">
-            <div class="section-content">
-                <h2>What creatives are saying</h2>
-                
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"This guide finally gave me permission to work at my own pace. I've finished more projects in the last three months than I did all last year."</p>
-                        <div class="reviewer">
-                            <div class="reviewer-info">
-                                <strong>Sarah M.</strong>
-                                <span>Freelance Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"As someone with ADHD and anxiety, traditional productivity advice never worked for me. This approach is different - it actually gets how our brains work."</p>
-                        <div class="reviewer">
-                            <div class="reviewer-info">
-                                <strong>Alex Chen</strong>
-                                <span>Content Creator</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"The trauma-informed approach made all the difference. I can now start projects without the overwhelming fear that I won't finish them."</p>
-                        <div class="reviewer">
-                            <div class="reviewer-info">
-                                <strong>Maya Rodriguez</strong>
-                                <span>Artist & Writer</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"Finally, a guide that doesn't shame you for being 'slow' or 'perfectionist.' It celebrates sensitivity as a creative strength."</p>
-                        <div class="reviewer">
-                            <div class="reviewer-info">
-                                <strong>Jordan Kim</strong>
-                                <span>Photographer</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"The worksheets alone are worth the price. I keep coming back to the completion framework for every new project."</p>
-                        <div class="reviewer">
-                            <div class="reviewer-info">
-                                <strong>Taylor Brooks</strong>
-                                <span>UX Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"This isn't just about productivity - it's about healing your relationship with creativity. Life-changing."</p>
-                        <div class="reviewer">
-                            <div class="reviewer-info">
-                                <strong>Riley Martinez</strong>
-                                <span>Musician</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="download" class="download-section">
-            <div class="section-content">
-                <div class="download-content">
-                    <div class="download-text">
-                        <h2>Ready to finish what you start?</h2>
-                        <p class="download-intro">
-                            Transform your creative process with this comprehensive guide designed specifically 
-                            for sensitive and neurodivergent creatives.
-                        </p>
-                        
-                        <div class="guide-value">
-                            <h3>Inside the guide:</h3>
-                            <div class="value-items">
-                                <div class="value-item">✨ 30+ pages of actionable strategies</div>
-                                <div class="value-item">📋 5 practical worksheets</div>
-                                <div class="value-item">🎯 Trauma-informed completion framework</div>
-                                <div class="value-item">💝 Self-compassion tools</div>
-                                <div class="value-item">🛡️ Perfectionism management techniques</div>
-                                <div class="value-item">⚡ Energy management for sensitive creatives</div>
-                            </div>
-                        </div>
-                        
-                        <div class="pricing">
-                            <div class="price">$17</div>
-                            <div class="price-note">One-time payment • Instant download • Lifetime access</div>
-                        </div>
-                        
-                        <div class="download-ctas">
-                            <button class="cta-button primary large" onclick="alert('LemonSqueezy integration coming soon! Check back in 24 hours.')">
-                                Get Full Guide - $17
-                            </button>
-                            <p class="guarantee">
-                                <i class="fas fa-shield-alt"></i>
-                                30-day money-back guarantee
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="download-image">
-                        <img src="https://gfrxhozi.gensparkspace.com/assets/ebook-cover-clean.jpg" alt="From Perfectionism to Creative Freedom Guide" class="guide-preview">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>Creative Momentum</h3>
-                <p>Supporting sensitive creatives in finishing what they start.</p>
-            </div>
-            
-            <div class="footer-links">
-                <a href="#guide">The Guide</a>
-                <a href="#movement">Our Movement</a>
-                <a href="#freebie">Free Resources</a>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Creative Momentum. Made with care for sensitive creatives.</p>
-        </div>
-    </footer>
-
-<script>
-// ===== EMBEDDED JAVASCRIPT =====
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // ===== SMOOTH SCROLLING =====
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 80;
-                
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // ===== NAVBAR SCROLL EFFECT =====
-    const navbar = document.querySelector('.navbar');
-    
-    if (navbar) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
-        });
-    }
-    
-    // ===== MOBILE NAVIGATION =====
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const navLinksContainer = document.querySelector('.nav-links');
-    
-    if (mobileMenuButton && navLinksContainer) {
-        // Add mobile styles
-        const mobileStyles = document.createElement('style');
-        mobileStyles.innerHTML = `
-            @media (max-width: 768px) {
-                .nav-links {
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    right: 0;
-                    background: white;
-                    flex-direction: column;
-                    padding: 20px;
-                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-                    transform: translateY(-100%);
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: all 0.3s ease;
-                    z-index: 999;
-                }
-                .nav-links.active {
-                    transform: translateY(0);
-                    opacity: 1;
-                    visibility: visible;
-                }
-                .nav-links a {
-                    display: block !important;
-                    padding: 10px 0;
-                    border-bottom: 1px solid #f3f4f6;
-                }
-                .nav-links a:last-child {
-                    border-bottom: none;
-                }
-            }
-        `;
-        document.head.appendChild(mobileStyles);
-        
-        // Mobile menu toggle
-        mobileMenuButton.addEventListener('click', function() {
-            navLinksContainer.classList.toggle('active');
-            const icon = this.querySelector('i');
-            if (navLinksContainer.classList.contains('active')) {
-                icon.className = 'fas fa-times';
-            } else {
-                icon.className = 'fas fa-bars';
-            }
-        });
-        
-        // Close mobile menu when clicking links
-        navLinksContainer.addEventListener('click', function(e) {
-            if (e.target.tagName === 'A') {
-                navLinksContainer.classList.remove('active');
-                mobileMenuButton.querySelector('i').className = 'fas fa-bars';
-            }
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!mobileMenuButton.contains(e.target) && !navLinksContainer.contains(e.target)) {
-                navLinksContainer.classList.remove('active');
-                mobileMenuButton.querySelector('i').className = 'fas fa-bars';
-            }
-        });
-    }
-    
-    // ===== ENHANCED INTERACTIVITY =====
-    
-    // Add hover effects to CTA buttons
-    const ctaButtons = document.querySelectorAll('.cta-button');
-    ctaButtons.forEach(button => {
-        button.addEventListener('mouseenter', function() {
-            if (!this.style.transform.includes('translateY')) {
-                this.style.transform = 'translateY(-3px)';
-            }
-        });
-        
-        button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-    
-    // ===== SCROLL ANIMATIONS =====
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Observe elements for animation
-    const animateElements = document.querySelectorAll('.feature, .value-item, .review-card');
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-    
-    // ===== FORM ENHANCEMENTS =====
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            const submitButton = this.querySelector('button[type="submit"]');
-            if (submitButton) {
-                const originalText = submitButton.textContent;
-                submitButton.textContent = 'Sending...';
-                submitButton.disabled = true;
-                
-                setTimeout(() => {
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                }, 3000);
-            }
-        });
-    });
-    
-    // Console welcome message
-    console.log('%c🌟 Welcome to Creative Momentum! 🌟', 'color: #d4a574; font-size: 16px; font-weight: bold;');
-    console.log('%cBuilt with care for sensitive creatives', 'color: #7a7a7a; font-size: 14px;');
-    
-});
-</script>
-
-</body>
-</html>
+   1	<!DOCTYPE html>
+     2	<html lang="en">
+     3	<head>
+     4	    <meta charset="UTF-8">
+     5	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6	    <title>Creative Momentum - Finish without burning out</title>
+     7	    <meta name="description" content="A creative guide for the sensitive, ambitious, and stuck. Overcome perfectionism and finish your projects without burnout.">
+     8	    
+     9	    <!-- Google Fonts - Inter for clean, gentle typography -->
+    10	    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    11	    
+    12	    <!-- Font Awesome for icons -->
+    13	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    14	    
+    15	    <!-- MailerLite Universal -->
+    16	    <script>
+    17	        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    18	        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    19	        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    20	        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    21	        ml('account', '1662371');
+    22	    </script>
+    23	    <!-- End MailerLite Universal -->
+    24	
+    25	<style>
+    26	/* ===== EMBEDDED CSS ===== */
+    27	* {
+    28	    margin: 0;
+    29	    padding: 0;
+    30	    box-sizing: border-box;
+    31	}
+    32	
+    33	html {
+    34	    scroll-behavior: smooth;
+    35	}
+    36	
+    37	body {
+    38	    font-family: 'Inter', sans-serif;
+    39	    line-height: 1.6;
+    40	    color: #4a5568;
+    41	    background-color: #f7f5f3;
+    42	    overflow-x: hidden;
+    43	}
+    44	
+    45	/* ===== NAVIGATION ===== */
+    46	.navbar {
+    47	    position: fixed;
+    48	    top: 0;
+    49	    left: 0;
+    50	    right: 0;
+    51	    background: rgba(255, 255, 255, 0.95);
+    52	    backdrop-filter: blur(10px);
+    53	    z-index: 1000;
+    54	    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    55	    transition: all 0.3s ease;
+    56	}
+    57	
+    58	.nav-container {
+    59	    max-width: 1200px;
+    60	    margin: 0 auto;
+    61	    padding: 0 20px;
+    62	    display: flex;
+    63	    justify-content: space-between;
+    64	    align-items: center;
+    65	    height: 70px;
+    66	}
+    67	
+    68	.nav-brand h1 {
+    69	    color: #8fa68e;
+    70	    font-weight: 600;
+    71	    font-size: 1.5rem;
+    72	}
+    73	
+    74	.nav-links {
+    75	    display: flex;
+    76	    align-items: center;
+    77	    gap: 2rem;
+    78	}
+    79	
+    80	.nav-links a {
+    81	    text-decoration: none;
+    82	    color: #4a5568;
+    83	    font-weight: 500;
+    84	    transition: color 0.3s ease;
+    85	}
+    86	
+    87	.nav-links a:hover {
+    88	    color: #8fa68e;
+    89	}
+    90	
+    91	.nav-cta {
+    92	    background: #d4a574;
+    93	    color: white;
+    94	    text-decoration: none;
+    95	    padding: 8px 20px;
+    96	    border-radius: 25px;
+    97	    font-weight: 500;
+    98	    font-size: 0.9rem;
+    99	    transition: all 0.3s ease;
+   100	    border: 2px solid #d4a574;
+   101	}
+   102	
+   103	.nav-cta:hover {
+   104	    background: transparent;
+   105	    color: #d4a574;
+   106	    transform: translateY(-2px);
+   107	}
+   108	
+   109	.mobile-menu-button {
+   110	    display: none;
+   111	    background: none;
+   112	    border: none;
+   113	    font-size: 1.5rem;
+   114	    color: #4a5568;
+   115	    cursor: pointer;
+   116	}
+   117	
+   118	/* ===== HERO SECTION ===== */
+   119	.hero {
+   120	    padding: 120px 0 80px;
+   121	    background: linear-gradient(135deg, #f0ede8 0%, #e8e3dd 100%);
+   122	    min-height: 100vh;
+   123	    display: flex;
+   124	    align-items: center;
+   125	}
+   126	
+   127	.hero-content {
+   128	    max-width: 1200px;
+   129	    margin: 0 auto;
+   130	    padding: 0 20px;
+   131	    display: grid;
+   132	    grid-template-columns: 1fr 1fr;
+   133	    gap: 4rem;
+   134	    align-items: center;
+   135	}
+   136	
+   137	.guide-badge {
+   138	    display: inline-block;
+   139	    background: linear-gradient(135deg, #d4a574 0%, #c79660 100%);
+   140	    color: white;
+   141	    padding: 8px 16px;
+   142	    border-radius: 20px;
+   143	    font-size: 0.8rem;
+   144	    font-weight: 600;
+   145	    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+   146	    margin-bottom: 1.5rem;
+   147	    animation: pulse 2s infinite;
+   148	}
+   149	
+   150	@keyframes pulse {
+   151	    0% { transform: scale(1); }
+   152	    50% { transform: scale(1.05); }
+   153	    100% { transform: scale(1); }
+   154	}
+   155	
+   156	.hero h1 {
+   157	    font-size: clamp(2.5rem, 5vw, 4rem);
+   158	    font-weight: 700;
+   159	    color: #4a5568;
+   160	    margin-bottom: 1rem;
+   161	    line-height: 1.1;
+   162	}
+   163	
+   164	.hero-text > p {
+   165	    font-size: 1.25rem;
+   166	    color: #7a7a7a;
+   167	    margin-bottom: 1.5rem;
+   168	    font-weight: 400;
+   169	}
+   170	
+   171	.hero-subtext {
+   172	    font-size: 1.1rem;
+   173	    color: #7a7a7a;
+   174	    margin-bottom: 2.5rem;
+   175	    line-height: 1.7;
+   176	}
+   177	
+   178	.hero-ctas {
+   179	    display: flex;
+   180	    gap: 1rem;
+   181	    flex-wrap: wrap;
+   182	}
+   183	
+   184	.cta-button {
+   185	    display: inline-flex;
+   186	    align-items: center;
+   187	    gap: 0.5rem;
+   188	    text-decoration: none;
+   189	    padding: 16px 32px;
+   190	    border-radius: 50px;
+   191	    font-weight: 600;
+   192	    font-size: 1rem;
+   193	    transition: all 0.3s ease;
+   194	    border: 2px solid transparent;
+   195	}
+   196	
+   197	.cta-button.primary {
+   198	    background: #d4a574;
+   199	    color: white;
+   200	    border-color: #d4a574;
+   201	}
+   202	
+   203	.cta-button.primary:hover {
+   204	    background: #c79660;
+   205	    transform: translateY(-3px);
+   206	    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+   207	}
+   208	
+   209	.cta-button.secondary {
+   210	    background: transparent;
+   211	    color: #8fa68e;
+   212	    border-color: #8fa68e;
+   213	}
+   214	
+   215	.cta-button.secondary:hover {
+   216	    background: #8fa68e;
+   217	    color: white;
+   218	    transform: translateY(-3px);
+   219	}
+   220	
+   221	.hero-image {
+   222	    display: flex;
+   223	    justify-content: center;
+   224	    align-items: center;
+   225	}
+   226	
+   227	.guide-cover {
+   228	    width: 100%;
+   229	    max-width: 400px;
+   230	    height: auto;
+   231	    border-radius: 15px;
+   232	    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+   233	    transition: all 0.3s ease;
+   234	}
+   235	
+   236	.guide-cover:hover {
+   237	    transform: translateY(-10px);
+   238	    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.2);
+   239	}
+   240	
+   241	/* ===== SECTION STYLES ===== */
+   242	.section-content {
+   243	    max-width: 1200px;
+   244	    margin: 0 auto;
+   245	    padding: 0 20px;
+   246	}
+   247	
+   248	.guide-section,
+   249	.movement-section,
+   250	.freebie-section,
+   251	.reviews-section,
+   252	.download-section {
+   253	    padding: 80px 0;
+   254	}
+   255	
+   256	.guide-section {
+   257	    background: white;
+   258	}
+   259	
+   260	.movement-section {
+   261	    background: #f0ede8;
+   262	}
+   263	
+   264	.freebie-section {
+   265	    background: linear-gradient(135deg, #f7f5f3 0%, #f0ede8 100%);
+   266	    border-top: 1px solid rgba(212, 165, 116, 0.1);
+   267	}
+   268	
+   269	.reviews-section {
+   270	    background: white;
+   271	    border-top: 1px solid rgba(143, 166, 142, 0.1);
+   272	}
+   273	
+   274	.download-section {
+   275	    background: linear-gradient(135deg, #b09c94 0%, #a08a7e 100%);
+   276	    color: white;
+   277	}
+   278	
+   279	/* ===== GUIDE SECTION ===== */
+   280	.guide-section h2 {
+   281	    font-size: clamp(2rem, 4vw, 3rem);
+   282	    font-weight: 700;
+   283	    color: #4a5568;
+   284	    margin-bottom: 3rem;
+   285	    text-align: center;
+   286	}
+   287	
+   288	.guide-features {
+   289	    display: grid;
+   290	    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   291	    gap: 3rem;
+   292	    margin-bottom: 3rem;
+   293	}
+   294	
+   295	.feature {
+   296	    text-align: center;
+   297	    padding: 2rem;
+   298	}
+   299	
+   300	.feature i {
+   301	    font-size: 2.5rem;
+   302	    color: #8fa68e;
+   303	    margin-bottom: 1.5rem;
+   304	}
+   305	
+   306	.feature h3 {
+   307	    font-size: 1.3rem;
+   308	    font-weight: 600;
+   309	    color: #4a5568;
+   310	    margin-bottom: 1rem;
+   311	}
+   312	
+   313	.feature p {
+   314	    color: #7a7a7a;
+   315	    line-height: 1.6;
+   316	}
+   317	
+   318	.guide-ctas {
+   319	    display: flex;
+   320	    gap: 1rem;
+   321	    justify-content: center;
+   322	    flex-wrap: wrap;
+   323	}
+   324	
+   325	/* ===== MOVEMENT SECTION ===== */
+   326	.movement-content {
+   327	    display: grid;
+   328	    grid-template-columns: 1fr 1fr;
+   329	    gap: 4rem;
+   330	    align-items: center;
+   331	    margin-bottom: 4rem;
+   332	}
+   333	
+   334	.movement-section h2 {
+   335	    font-size: clamp(2rem, 4vw, 3rem);
+   336	    font-weight: 700;
+   337	    color: #4a5568;
+   338	    margin-bottom: 1.5rem;
+   339	}
+   340	
+   341	.movement-intro {
+   342	    font-size: 1.2rem;
+   343	    color: #7a7a7a;
+   344	    line-height: 1.7;
+   345	    margin-bottom: 2rem;
+   346	}
+   347	
+   348	.movement-values {
+   349	    display: grid;
+   350	    grid-template-columns: 1fr 1fr;
+   351	    gap: 1.5rem;
+   352	    margin-bottom: 2rem;
+   353	}
+   354	
+   355	.value-item {
+   356	    display: flex;
+   357	    align-items: center;
+   358	    gap: 1rem;
+   359	    padding: 1rem;
+   360	    background: rgba(255, 255, 255, 0.7);
+   361	    border-radius: 10px;
+   362	    transition: all 0.3s ease;
+   363	}
+   364	
+   365	.value-item:hover {
+   366	    background: rgba(255, 255, 255, 0.9);
+   367	    transform: translateY(-2px);
+   368	}
+   369	
+   370	.value-item i {
+   371	    font-size: 1.5rem;
+   372	    color: #8fa68e;
+   373	}
+   374	
+   375	.value-item span {
+   376	    font-weight: 500;
+   377	    color: #4a5568;
+   378	}
+   379	
+   380	.movement-quote {
+   381	    font-size: 1.1rem;
+   382	    font-style: italic;
+   383	    color: #7a7a7a;
+   384	    text-align: center;
+   385	    padding: 1.5rem;
+   386	    background: rgba(255, 255, 255, 0.7);
+   387	    border-radius: 15px;
+   388	    border-left: 4px solid #d4a574;
+   389	}
+   390	
+   391	.movement-visual {
+   392	    display: flex;
+   393	    justify-content: center;
+   394	    align-items: center;
+   395	}
+   396	
+   397	.neon-image {
+   398	    width: 100%;
+   399	    height: auto;
+   400	    border-radius: 15px;
+   401	    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+   402	    transition: transform 0.3s ease;
+   403	}
+   404	
+   405	.neon-image:hover {
+   406	    transform: scale(1.02);
+   407	}
+   408	
+   409	/* ===== FREEBIE SECTION ===== */
+   410	.freebie-content {
+   411	    display: grid;
+   412	    grid-template-columns: 1fr 1fr;
+   413	    gap: 4rem;
+   414	    align-items: center;
+   415	}
+   416	
+   417	.freebie-image {
+   418	    display: flex;
+   419	    justify-content: center;
+   420	    align-items: center;
+   421	}
+   422	
+   423	.completion-preview {
+   424	    width: 100%;
+   425	    max-width: 300px;
+   426	    height: auto;
+   427	    border-radius: 15px;
+   428	    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+   429	    transition: all 0.3s ease;
+   430	}
+   431	
+   432	.completion-preview:hover {
+   433	    transform: translateY(-10px);
+   434	    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.2);
+   435	}
+   436	
+   437	.freebie-badge {
+   438	    display: inline-block;
+   439	    background: linear-gradient(135deg, #8fa68e 0%, #7a8f7e 100%);
+   440	    color: white;
+   441	    padding: 8px 16px;
+   442	    border-radius: 20px;
+   443	    font-size: 0.8rem;
+   444	    font-weight: 600;
+   445	    margin-bottom: 1.5rem;
+   446	}
+   447	
+   448	.freebie-text h2 {
+   449	    font-size: clamp(2rem, 4vw, 2.5rem);
+   450	    font-weight: 700;
+   451	    color: #4a5568;
+   452	    margin-bottom: 1.5rem;
+   453	}
+   454	
+   455	.freebie-description {
+   456	    font-size: 1.1rem;
+   457	    color: #7a7a7a;
+   458	    line-height: 1.7;
+   459	    margin-bottom: 2rem;
+   460	}
+   461	
+   462	.freebie-features {
+   463	    margin-bottom: 2rem;
+   464	}
+   465	
+   466	.feature-item {
+   467	    display: flex;
+   468	    align-items: center;
+   469	    gap: 1rem;
+   470	    margin-bottom: 1rem;
+   471	    color: #4a5568;
+   472	    font-size: 1rem;
+   473	    line-height: 1.5;
+   474	}
+   475	
+   476	/* MailerLite Form Styling */
+   477	.ml-form-wrapper {
+   478	    background: white;
+   479	    border-radius: 20px;
+   480	    padding: 2rem;
+   481	    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+   482	    border: 2px solid rgba(212, 165, 116, 0.1);
+   483	    margin-top: 2rem;
+   484	}
+   485	
+   486	.ml-form-wrapper input[type="text"],
+   487	.ml-form-wrapper input[type="email"] {
+   488	    width: 100%;
+   489	    padding: 16px 24px;
+   490	    border: 2px solid #e8e3dd;
+   491	    border-radius: 50px;
+   492	    font-family: 'Inter', sans-serif;
+   493	    font-size: 1rem;
+   494	    margin-bottom: 1rem;
+   495	    transition: all 0.3s ease;
+   496	    background-color: #f7f5f3;
+   497	    color: #4a5568;
+   498	}
+   499	
+   500	.ml-form-wrapper input[type="text"]:focus,
+   501	.ml-form-wrapper input[type="email"]:focus {
+   502	    outline: none;
+   503	    border-color: #d4a574;
+   504	    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+   505	}
+   506	
+   507	.ml-form-wrapper input::placeholder {
+   508	    color: #a0a0a0;
+   509	}
+   510	
+   511	.ml-form-buttons .cta-button {
+   512	    width: 100%;
+   513	    justify-content: center;
+   514	    margin-top: 1rem;
+   515	}
+   516	
+   517	.privacy-note {
+   518	    text-align: center;
+   519	    margin-top: 1rem;
+   520	    color: #7a7a7a;
+   521	    font-size: 0.9rem;
+   522	}
+   523	
+   524	.privacy-note i {
+   525	    margin-right: 0.5rem;
+   526	    color: #8fa68e;
+   527	}
+   528	
+   529	/* ===== REVIEWS SECTION ===== */
+   530	.reviews-section h2 {
+   531	    font-size: clamp(2rem, 4vw, 2.5rem);
+   532	    font-weight: 700;
+   533	    color: #4a5568;
+   534	    margin-bottom: 3rem;
+   535	    text-align: center;
+   536	}
+   537	
+   538	.reviews-grid {
+   539	    display: grid;
+   540	    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   541	    gap: 2rem;
+   542	    max-width: 1200px;
+   543	    margin: 0 auto;
+   544	}
+   545	
+   546	.review-card {
+   547	    background: #f7f5f3;
+   548	    border-radius: 15px;
+   549	    padding: 2rem;
+   550	    border: 2px solid rgba(212, 165, 116, 0.1);
+   551	    transition: all 0.3s ease;
+   552	    position: relative;
+   553	}
+   554	
+   555	.review-card:hover {
+   556	    transform: translateY(-5px);
+   557	    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+   558	    border-color: rgba(212, 165, 116, 0.3);
+   559	}
+   560	
+   561	.review-card .stars {
+   562	    display: flex;
+   563	    gap: 0.2rem;
+   564	    margin-bottom: 1rem;
+   565	    color: #fbbf24;
+   566	}
+   567	
+   568	.review-card p {
+   569	    font-size: 1.1rem;
+   570	    line-height: 1.6;
+   571	    color: #4a5568;
+   572	    margin-bottom: 1.5rem;
+   573	    font-style: italic;
+   574	}
+   575	
+   576	.reviewer {
+   577	    display: flex;
+   578	    flex-direction: column;
+   579	    gap: 0.2rem;
+   580	}
+   581	
+   582	.reviewer-info strong {
+   583	    font-weight: 600;
+   584	    color: #4a5568;
+   585	    font-size: 1rem;
+   586	}
+   587	
+   588	.reviewer-info span {
+   589	    color: #7a7a7a;
+   590	    font-size: 0.9rem;
+   591	}
+   592	
+   593	/* ===== DOWNLOAD SECTION ===== */
+   594	.download-content {
+   595	    display: grid;
+   596	    grid-template-columns: 1fr 1fr;
+   597	    gap: 4rem;
+   598	    align-items: center;
+   599	    text-align: left;
+   600	}
+   601	
+   602	.download-section h2 {
+   603	    font-size: clamp(2rem, 4vw, 2.5rem);
+   604	    margin-bottom: 1rem;
+   605	    color: white;
+   606	}
+   607	
+   608	.download-intro {
+   609	    font-size: 1.2rem;
+   610	    opacity: 0.9;
+   611	    margin-bottom: 3rem;
+   612	    color: white;
+   613	}
+   614	
+   615	.guide-value h3 {
+   616	    font-size: 1.5rem;
+   617	    font-weight: 600;
+   618	    margin-bottom: 1.5rem;
+   619	    color: white;
+   620	}
+   621	
+   622	.value-items {
+   623	    margin-bottom: 2rem;
+   624	}
+   625	
+   626	.value-item {
+   627	    color: rgba(255, 255, 255, 0.9);
+   628	    font-size: 1rem;
+   629	    margin-bottom: 0.8rem;
+   630	    line-height: 1.4;
+   631	}
+   632	
+   633	.pricing {
+   634	    margin: 2rem 0;
+   635	}
+   636	
+   637	.price {
+   638	    font-size: 3rem;
+   639	    font-weight: 700;
+   640	    color: #d4a574;
+   641	    margin-bottom: 0.5rem;
+   642	}
+   643	
+   644	.price-note {
+   645	    color: rgba(255, 255, 255, 0.8);
+   646	    font-size: 0.9rem;
+   647	}
+   648	
+   649	.download-ctas {
+   650	    margin-bottom: 1rem;
+   651	}
+   652	
+   653	.cta-button.large {
+   654	    padding: 20px 40px;
+   655	    font-size: 1.1rem;
+   656	    width: 100%;
+   657	    justify-content: center;
+   658	    margin-bottom: 1rem;
+   659	}
+   660	
+   661	.guarantee {
+   662	    color: rgba(255, 255, 255, 0.8);
+   663	    font-size: 0.9rem;
+   664	    margin: 0;
+   665	    text-align: center;
+   666	}
+   667	
+   668	.guarantee i {
+   669	    margin-right: 0.5rem;
+   670	    color: #d4a574;
+   671	}
+   672	
+   673	.download-image {
+   674	    display: flex;
+   675	    justify-content: center;
+   676	    align-items: center;
+   677	}
+   678	
+   679	.guide-preview {
+   680	    width: 100%;
+   681	    max-width: 300px;
+   682	    height: auto;
+   683	    border-radius: 15px;
+   684	    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+   685	    transition: all 0.3s ease;
+   686	}
+   687	
+   688	.guide-preview:hover {
+   689	    transform: translateY(-10px);
+   690	    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4);
+   691	}
+   692	
+   693	/* ===== FOOTER ===== */
+   694	.footer {
+   695	    background: #4a453e;
+   696	    color: white;
+   697	    padding: 60px 0 20px;
+   698	}
+   699	
+   700	.footer-content {
+   701	    max-width: 1200px;
+   702	    margin: 0 auto;
+   703	    padding: 0 20px;
+   704	    display: grid;
+   705	    grid-template-columns: 2fr 1fr;
+   706	    gap: 3rem;
+   707	    margin-bottom: 2rem;
+   708	}
+   709	
+   710	.footer-brand h3 {
+   711	    font-size: 1.5rem;
+   712	    font-weight: 600;
+   713	    margin-bottom: 1rem;
+   714	    color: #d4a574;
+   715	}
+   716	
+   717	.footer-brand p {
+   718	    color: #c7c2bd;
+   719	    line-height: 1.6;
+   720	}
+   721	
+   722	.footer-links {
+   723	    display: flex;
+   724	    gap: 3rem;
+   725	}
+   726	
+   727	.footer-links a {
+   728	    color: #c7c2bd;
+   729	    text-decoration: none;
+   730	    transition: color 0.3s ease;
+   731	}
+   732	
+   733	.footer-links a:hover {
+   734	    color: #d4a574;
+   735	}
+   736	
+   737	.footer-bottom {
+   738	    text-align: center;
+   739	    padding-top: 2rem;
+   740	    border-top: 1px solid #665e57;
+   741	    color: #c7c2bd;
+   742	    max-width: 1200px;
+   743	    margin: 0 auto;
+   744	    padding-left: 20px;
+   745	    padding-right: 20px;
+   746	}
+   747	
+   748	/* ===== RESPONSIVE DESIGN ===== */
+   749	@media (max-width: 1024px) {
+   750	    .hero-content {
+   751	        grid-template-columns: 1fr;
+   752	        text-align: center;
+   753	        gap: 3rem;
+   754	    }
+   755	    
+   756	    .movement-content {
+   757	        grid-template-columns: 1fr;
+   758	        gap: 3rem;
+   759	        text-align: center;
+   760	    }
+   761	    
+   762	    .movement-values {
+   763	        grid-template-columns: 1fr 1fr;
+   764	    }
+   765	    
+   766	    .freebie-content {
+   767	        grid-template-columns: 1fr;
+   768	        gap: 3rem;
+   769	        text-align: center;
+   770	    }
+   771	    
+   772	    .download-content {
+   773	        grid-template-columns: 1fr;
+   774	        gap: 3rem;
+   775	        text-align: center;
+   776	    }
+   777	}
+   778	
+   779	@media (max-width: 768px) {
+   780	    .nav-links a:not(.nav-cta) {
+   781	        display: none;
+   782	    }
+   783	    
+   784	    .mobile-menu-button {
+   785	        display: block;
+   786	    }
+   787	    
+   788	    .hero {
+   789	        padding: 100px 0 60px;
+   790	    }
+   791	    
+   792	    .hero-ctas {
+   793	        flex-direction: column;
+   794	        align-items: center;
+   795	    }
+   796	    
+   797	    .cta-button {
+   798	        width: 100%;
+   799	        max-width: 300px;
+   800	        justify-content: center;
+   801	    }
+   802	    
+   803	    .guide-section,
+   804	    .movement-section,
+   805	    .download-section,
+   806	    .freebie-section {
+   807	        padding: 60px 0;
+   808	    }
+   809	    
+   810	    .movement-values {
+   811	        grid-template-columns: 1fr;
+   812	    }
+   813	    
+   814	    .reviews-grid {
+   815	        grid-template-columns: 1fr;
+   816	        gap: 1.5rem;
+   817	    }
+   818	    
+   819	    .footer-content {
+   820	        grid-template-columns: 1fr;
+   821	        text-align: center;
+   822	    }
+   823	    
+   824	    .footer-links {
+   825	        justify-content: center;
+   826	    }
+   827	}
+   828	
+   829	@media (max-width: 480px) {
+   830	    .section-content {
+   831	        padding: 0 15px;
+   832	    }
+   833	    
+   834	    .hero-content,
+   835	    .footer-content {
+   836	        padding: 0 15px;
+   837	    }
+   838	    
+   839	    .nav-container {
+   840	        padding: 0 15px;
+   841	    }
+   842	    
+   843	    .guide-features {
+   844	        grid-template-columns: 1fr;
+   845	    }
+   846	    
+   847	    .ml-form-wrapper {
+   848	        padding: 1.5rem;
+   849	    }
+   850	}
+   851	</style>
+   852	
+   853	</head>
+   854	<body>
+   855	    <nav class="navbar">
+   856	        <div class="nav-container">
+   857	            <div class="nav-brand">
+   858	                <h1>Creative Momentum</h1>
+   859	            </div>
+   860	            <div class="nav-links">
+   861	                <a href="#guide">The Guide</a>
+   862	                <a href="#movement">Our Movement</a>
+   863	                <a href="#freebie">Free Completion Plan</a>
+   864	                <a href="#download" class="cta-button nav-cta">Full Guide</a>
+   865	            </div>
+   866	            <button class="mobile-menu-button">
+   867	                <i class="fas fa-bars"></i>
+   868	            </button>
+   869	        </div>
+   870	    </nav>
+   871	
+   872	    <main>
+   873	        <section class="hero">
+   874	            <div class="hero-content">
+   875	                <div class="hero-text">
+   876	                    <div class="guide-badge">PDF DOWNLOAD</div>
+   877	                    <h1>Finish without burning out.</h1>
+   878	                    <p>A creative guide for the sensitive, ambitious, and stuck.</p>
+   879	                    
+   880	                    <p class="hero-subtext">
+   881	                        How to Overcome Perfectionism as a Sensitive Creative is a step-by-step digital guide for 
+   882	                        sensitive and neurodivergent creatives who start projects but rarely finish them.
+   883	                    </p>
+   884	                    
+   885	                    <div class="hero-ctas">
+   886	                        <a href="#freebie" class="cta-button secondary">Start with Free Worksheet</a>
+   887	                        <a href="#download" class="cta-button primary">Get Full Guide</a>
+   888	                    </div>
+   889	                </div>
+   890	                <div class="hero-image">
+   891	                    <img src="https://gfrxhozi.gensparkspace.com/assets/ebook-cover-clean.jpg" alt="How to Overcome Perfectionism as a Sensitive Creative Guide Cover" class="guide-cover">
+   892	                </div>
+   893	            </div>
+   894	        </section>
+   895	
+   896	        <section id="guide" class="guide-section">
+   897	            <div class="section-content">
+   898	                <h2>What you'll get in this guide:</h2>
+   899	                
+   900	                <div class="guide-features">
+   901	                    <div class="feature">
+   902	                        <i class="fas fa-clipboard-check"></i>
+   903	                        <h3>Worksheets and reflection prompts</h3>
+   904	                        <p>Practical exercises to help you understand your creative patterns and breakthrough blocks.</p>
+   905	                    </div>
+   906	                    
+   907	                    <div class="feature">
+   908	                        <i class="fas fa-volume-mute"></i>
+   909	                        <h3>Tools to quiet the inner critic</h3>
+   910	                        <p>Evidence-based strategies to manage perfectionist thinking and self-doubt.</p>
+   911	                    </div>
+   912	                    
+   913	                    <div class="feature">
+   914	                        <i class="fas fa-turtle"></i>
+   915	                        <h3>Permission to move at your own pace — and still finish</h3>
+   916	                        <p>Sustainable methods that work with your sensitivity, not against it.</p>
+   917	                    </div>
+   918	                    
+   919	                    <div class="feature">
+   920	                        <i class="fas fa-heart"></i>
+   921	                        <h3>A trauma-aware completion framework</h3>
+   922	                        <p>Gentle approaches that honor your nervous system and creative process.</p>
+   923	                    </div>
+   924	                </div>
+   925	                
+   926	                <div class="guide-ctas">
+   927	                    <a href="#freebie" class="cta-button secondary">Start with Free Worksheet</a>
+   928	                    <a href="#download" class="cta-button primary">Get Full Guide</a>
+   929	                </div>
+   930	            </div>
+   931	        </section>
+   932	
+   933	        <section id="movement" class="movement-section">
+   934	            <div class="section-content">
+   935	                <div class="movement-content">
+   936	                    <div class="movement-text">
+   937	                        <h2>Our Movement</h2>
+   938	                        <p class="movement-intro">
+   939	                            We're building a community of sensitive and neurodivergent creatives who refuse to let perfectionism steal their dreams.
+   940	                        </p>
+   941	                        
+   942	                        <div class="movement-values">
+   943	                            <div class="value-item">
+   944	                                <i class="fas fa-seedling"></i>
+   945	                                <span>Growth over perfection</span>
+   946	                            </div>
+   947	                            <div class="value-item">
+   948	                                <i class="fas fa-users"></i>
+   949	                                <span>Community over competition</span>
+   950	                            </div>
+   951	                            <div class="value-item">
+   952	                                <i class="fas fa-heart"></i>
+   953	                                <span>Compassion over criticism</span>
+   954	                            </div>
+   955	                            <div class="value-item">
+   956	                                <i class="fas fa-rocket"></i>
+   957	                                <span>Progress over perfection</span>
+   958	                            </div>
+   959	                        </div>
+   960	                        
+   961	                        <p class="movement-quote">
+   962	                            "Done is better than perfect, and imperfect action creates more momentum than perfect inaction."
+   963	                        </p>
+   964	                    </div>
+   965	                    
+   966	                    <div class="movement-visual">
+   967	                        <img src="https://gfrxhozi.gensparkspace.com/assets/neon-sign.jpg" alt="It's gonna NOT be okay - Creative authenticity" class="neon-image">
+   968	                    </div>
+   969	                </div>
+   970	            </div>
+   971	        </section>
+   972	
+   973	        <section id="freebie" class="freebie-section">
+   974	            <div class="section-content">
+   975	                <div class="freebie-content">
+   976	                    <div class="freebie-image">
+   977	                        <img src="https://gfrxhozi.gensparkspace.com/assets/completion-plan-preview.png" alt="Creative Completion Plan Preview" class="completion-preview">
+   978	                    </div>
+   979	                    
+   980	                    <div class="freebie-text">
+   981	                        <div class="freebie-badge">FREE WORKSHEET</div>
+   982	                        <h2>Creative Completion Plan</h2>
+   983	                        <p class="freebie-description">
+   984	                            Get our most popular worksheet that helps you map out your project from start to finish, 
+   985	                            with built-in flexibility for your sensitive creative process.
+   986	                        </p>
+   987	                        
+   988	                        <div class="freebie-features">
+   989	                            <div class="feature-item">✨ Project breakdown templates</div>
+   990	                            <div class="feature-item">🎯 Gentle goal-setting framework</div>
+   991	                            <div class="feature-item">🛡️ Perfectionism checkpoints</div>
+   992	                            <div class="feature-item">💝 Self-compassion reminders</div>
+   993	                        </div>
+   994	                        
+   995	                        <div class="ml-form-wrapper">
+   996	                            <div class="ml-form-container">
+   997	                                <div class="ml-form" id="form_1234567">
+   998	                                    <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/abc123" method="post" target="_blank">
+   999	                                        <div class="ml-form-formContent">
+  1000	                                            <div class="ml-form-fieldRow">
+  1001	                                                <div class="ml-field-group ml-field-name">
+  1002	                                                    <input type="text" name="fields[name]" placeholder="Your name" required>
+  1003	                                                </div>
+  1004	                                                <div class="ml-field-group ml-field-email">
+  1005	                                                    <input type="email" name="fields[email]" placeholder="Your email" required>
+  1006	                                                </div>
+  1007	                                            </div>
+  1008	                                        </div>
+  1009	                                        <div class="ml-form-buttons">
+  1010	                                            <button type="submit" class="cta-button primary">
+  1011	                                                Get Free Completion Plan
+  1012	                                            </button>
+  1013	                                        </div>
+  1014	                                        <input type="hidden" name="ml-submit" value="1">
+  1015	                                        <div style="display: none;">
+  1016	                                            <input type="text" name="fields[gdpr_compliance]" tabindex="-1" value="" autocomplete="off">
+  1017	                                        </div>
+  1018	                                    </form>
+  1019	                                </div>
+  1020	                            </div>
+  1021	                        </div>
+  1022	                        
+  1023	
+  1024	                    </div>
+  1025	                </div>
+  1026	            </div>
+  1027	        </section>
+  1028	
+  1029	        <section class="reviews-section">
+  1030	            <div class="section-content">
+  1031	                <h2>What creatives are saying</h2>
+  1032	                
+  1033	                <div class="reviews-grid">
+  1034	                    <div class="review-card">
+  1035	                        <div class="stars">★★★★★</div>
+  1036	                        <p>"This guide finally gave me permission to work at my own pace. I've finished more projects in the last three months than I did all last year."</p>
+  1037	                        <div class="reviewer">
+  1038	                            <div class="reviewer-info">
+  1039	                                <strong>Sarah M.</strong>
+  1040	                                <span>Freelance Designer</span>
+  1041	                            </div>
+  1042	                        </div>
+  1043	                    </div>
+  1044	                    
+  1045	                    <div class="review-card">
+  1046	                        <div class="stars">★★★★★</div>
+  1047	                        <p>"As someone with ADHD and anxiety, traditional productivity advice never worked for me. This approach is different - it actually gets how our brains work."</p>
+  1048	                        <div class="reviewer">
+  1049	                            <div class="reviewer-info">
+  1050	                                <strong>Alex Chen</strong>
+  1051	                                <span>Content Creator</span>
+  1052	                            </div>
+  1053	                        </div>
+  1054	                    </div>
+  1055	                    
+  1056	                    <div class="review-card">
+  1057	                        <div class="stars">★★★★★</div>
+  1058	                        <p>"The trauma-informed approach made all the difference. I can now start projects without the overwhelming fear that I won't finish them."</p>
+  1059	                        <div class="reviewer">
+  1060	                            <div class="reviewer-info">
+  1061	                                <strong>Maya Rodriguez</strong>
+  1062	                                <span>Artist & Writer</span>
+  1063	                            </div>
+  1064	                        </div>
+  1065	                    </div>
+  1066	                    
+  1067	                    <div class="review-card">
+  1068	                        <div class="stars">★★★★★</div>
+  1069	                        <p>"Finally, a guide that doesn't shame you for being 'slow' or 'perfectionist.' It celebrates sensitivity as a creative strength."</p>
+  1070	                        <div class="reviewer">
+  1071	                            <div class="reviewer-info">
+  1072	                                <strong>Jordan Kim</strong>
+  1073	                                <span>Photographer</span>
+  1074	                            </div>
+  1075	                        </div>
+  1076	                    </div>
+  1077	                    
+  1078	                    <div class="review-card">
+  1079	                        <div class="stars">★★★★★</div>
+  1080	                        <p>"The worksheets alone are worth the price. I keep coming back to the completion framework for every new project."</p>
+  1081	                        <div class="reviewer">
+  1082	                            <div class="reviewer-info">
+  1083	                                <strong>Taylor Brooks</strong>
+  1084	                                <span>UX Designer</span>
+  1085	                            </div>
+  1086	                        </div>
+  1087	                    </div>
+  1088	                    
+  1089	                    <div class="review-card">
+  1090	                        <div class="stars">★★★★★</div>
+  1091	                        <p>"This isn't just about productivity - it's about healing your relationship with creativity. Life-changing."</p>
+  1092	                        <div class="reviewer">
+  1093	                            <div class="reviewer-info">
+  1094	                                <strong>Riley Martinez</strong>
+  1095	                                <span>Musician</span>
+  1096	                            </div>
+  1097	                        </div>
+  1098	                    </div>
+  1099	                </div>
+  1100	            </div>
+  1101	        </section>
+  1102	
+  1103	        <section id="download" class="download-section">
+  1104	            <div class="section-content">
+  1105	                <div class="download-content">
+  1106	                    <div class="download-text">
+  1107	                        <h2>Ready to finish what you start?</h2>
+  1108	                        <p class="download-intro">
+  1109	                            Transform your creative process with this comprehensive guide designed specifically 
+  1110	                            for sensitive and neurodivergent creatives.
+  1111	                        </p>
+  1112	                        
+  1113	                        <div class="guide-value">
+  1114	                            <h3>Inside the guide:</h3>
+  1115	                            <div class="value-items">
+  1116	                                <div class="value-item">✨ 30+ pages of actionable strategies</div>
+  1117	                                <div class="value-item">📋 4 practical worksheets</div>
+  1118	                                <div class="value-item">🎯 Trauma-informed completion framework</div>
+  1119	                                <div class="value-item">💝 Self-compassion tools</div>
+  1120	                                <div class="value-item">🛡️ Perfectionism management techniques</div>
+  1121	                                <div class="value-item">⚡ Energy management for sensitive creatives</div>
+  1122	                            </div>
+  1123	                        </div>
+  1124	                        
+  1125	                        <div class="pricing">
+  1126	                            <div class="price">$17</div>
+  1127	                            <div class="price-note">One-time payment • Instant download • Lifetime access</div>
+  1128	                        </div>
+  1129	                        
+  1130	                        <div class="download-ctas">
+  1131	                            <a href="https://cadetcreative.lemonsqueezy.com/buy/857fc909-690d-4508-bb53-7b88223bb3c5?embed=1" class="cta-button primary large lemonsqueezy-button">
+  1132	                                Get Full Guide
+  1133	                            </a>
+  1134	                        </div>
+  1135	                    </div>
+  1136	                    
+  1137	                    <div class="download-image">
+  1138	                        <img src="https://gfrxhozi.gensparkspace.com/assets/ebook-cover-clean.jpg" alt="How to Overcome Perfectionism as a Sensitive Creative Guide" class="guide-preview">
+  1139	                    </div>
+  1140	                </div>
+  1141	            </div>
+  1142	        </section>
+  1143	    </main>
+  1144	
+  1145	    <footer class="footer">
+  1146	        <div class="footer-content">
+  1147	            <div class="footer-brand">
+  1148	                <h3>Creative Momentum</h3>
+  1149	                <p>Supporting sensitive creatives in finishing what they start.</p>
+  1150	            </div>
+  1151	            
+  1152	            <div class="footer-links">
+  1153	                <a href="#guide">The Guide</a>
+  1154	                <a href="#movement">Our Movement</a>
+  1155	                <a href="#freebie">Free Resources</a>
+  1156	            </div>
+  1157	        </div>
+  1158	        
+  1159	        <div class="footer-bottom">
+  1160	            <p>&copy; 2025 Creative Momentum. Made with care for sensitive creatives.</p>
+  1161	        </div>
+  1162	    </footer>
+  1163	
+  1164	<!-- LemonSqueezy Integration -->
+  1165	<script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+  1166	
+  1167	<script>
+  1168	// ===== EMBEDDED JAVASCRIPT =====
+  1169	document.addEventListener('DOMContentLoaded', function() {
+  1170	    
+  1171	    // ===== SMOOTH SCROLLING =====
+  1172	    const navLinks = document.querySelectorAll('a[href^="#"]');
+  1173	    
+  1174	    navLinks.forEach(link => {
+  1175	        link.addEventListener('click', function(e) {
+  1176	            e.preventDefault();
+  1177	            
+  1178	            const targetId = this.getAttribute('href').substring(1);
+  1179	            const targetElement = document.getElementById(targetId);
+  1180	            
+  1181	            if (targetElement) {
+  1182	                const offsetTop = targetElement.offsetTop - 80;
+  1183	                
+  1184	                window.scrollTo({
+  1185	                    top: offsetTop,
+  1186	                    behavior: 'smooth'
+  1187	                });
+  1188	            }
+  1189	        });
+  1190	    });
+  1191	    
+  1192	    // ===== NAVBAR SCROLL EFFECT =====
+  1193	    const navbar = document.querySelector('.navbar');
+  1194	    
+  1195	    if (navbar) {
+  1196	        window.addEventListener('scroll', function() {
+  1197	            if (window.scrollY > 50) {
+  1198	                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+  1199	                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+  1200	            } else {
+  1201	                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+  1202	                navbar.style.boxShadow = 'none';
+  1203	            }
+  1204	        });
+  1205	    }
+  1206	    
+  1207	    // ===== MOBILE NAVIGATION =====
+  1208	    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  1209	    const navLinksContainer = document.querySelector('.nav-links');
+  1210	    
+  1211	    if (mobileMenuButton && navLinksContainer) {
+  1212	        // Add mobile styles
+  1213	        const mobileStyles = document.createElement('style');
+  1214	        mobileStyles.innerHTML = `
+  1215	            @media (max-width: 768px) {
+  1216	                .nav-links {
+  1217	                    position: absolute;
+  1218	                    top: 100%;
+  1219	                    left: 0;
+  1220	                    right: 0;
+  1221	                    background: white;
+  1222	                    flex-direction: column;
+  1223	                    padding: 20px;
+  1224	                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  1225	                    transform: translateY(-100%);
+  1226	                    opacity: 0;
+  1227	                    visibility: hidden;
+  1228	                    transition: all 0.3s ease;
+  1229	                    z-index: 999;
+  1230	                }
+  1231	                .nav-links.active {
+  1232	                    transform: translateY(0);
+  1233	                    opacity: 1;
+  1234	                    visibility: visible;
+  1235	                }
+  1236	                .nav-links a {
+  1237	                    display: block !important;
+  1238	                    padding: 10px 0;
+  1239	                    border-bottom: 1px solid #f3f4f6;
+  1240	                }
+  1241	                .nav-links a:last-child {
+  1242	                    border-bottom: none;
+  1243	                }
+  1244	            }
+  1245	        `;
+  1246	        document.head.appendChild(mobileStyles);
+  1247	        
+  1248	        // Mobile menu toggle
+  1249	        mobileMenuButton.addEventListener('click', function() {
+  1250	            navLinksContainer.classList.toggle('active');
+  1251	            const icon = this.querySelector('i');
+  1252	            if (navLinksContainer.classList.contains('active')) {
+  1253	                icon.className = 'fas fa-times';
+  1254	            } else {
+  1255	                icon.className = 'fas fa-bars';
+  1256	            }
+  1257	        });
+  1258	        
+  1259	        // Close mobile menu when clicking links
+  1260	        navLinksContainer.addEventListener('click', function(e) {
+  1261	            if (e.target.tagName === 'A') {
+  1262	                navLinksContainer.classList.remove('active');
+  1263	                mobileMenuButton.querySelector('i').className = 'fas fa-bars';
+  1264	            }
+  1265	        });
+  1266	        
+  1267	        // Close mobile menu when clicking outside
+  1268	        document.addEventListener('click', function(e) {
+  1269	            if (!mobileMenuButton.contains(e.target) && !navLinksContainer.contains(e.target)) {
+  1270	                navLinksContainer.classList.remove('active');
+  1271	                mobileMenuButton.querySelector('i').className = 'fas fa-bars';
+  1272	            }
+  1273	        });
+  1274	    }
+  1275	    
+  1276	    // ===== ENHANCED INTERACTIVITY =====
+  1277	    
+  1278	    // Add hover effects to CTA buttons
+  1279	    const ctaButtons = document.querySelectorAll('.cta-button');
+  1280	    ctaButtons.forEach(button => {
+  1281	        button.addEventListener('mouseenter', function() {
+  1282	            if (!this.style.transform.includes('translateY')) {
+  1283	                this.style.transform = 'translateY(-3px)';
+  1284	            }
+  1285	        });
+  1286	        
+  1287	        button.addEventListener('mouseleave', function() {
+  1288	            this.style.transform = 'translateY(0)';
+  1289	        });
+  1290	    });
+  1291	    
+  1292	    // ===== SCROLL ANIMATIONS =====
+  1293	    const observerOptions = {
+  1294	        threshold: 0.1,
+  1295	        rootMargin: '0px 0px -50px 0px'
+  1296	    };
+  1297	    
+  1298	    const observer = new IntersectionObserver(function(entries) {
+  1299	        entries.forEach(entry => {
+  1300	            if (entry.isIntersecting) {
+  1301	                entry.target.style.opacity = '1';
+  1302	                entry.target.style.transform = 'translateY(0)';
+  1303	            }
+  1304	        });
+  1305	    }, observerOptions);
+  1306	    
+  1307	    // Observe elements for animation
+  1308	    const animateElements = document.querySelectorAll('.feature, .value-item, .review-card');
+  1309	    animateElements.forEach(el => {
+  1310	        el.style.opacity = '0';
+  1311	        el.style.transform = 'translateY(30px)';
+  1312	        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  1313	        observer.observe(el);
+  1314	    });
+  1315	    
+  1316	    // ===== FORM ENHANCEMENTS =====
+  1317	    const forms = document.querySelectorAll('form');
+  1318	    forms.forEach(form => {
+  1319	        form.addEventListener('submit', function(e) {
+  1320	            const submitButton = this.querySelector('button[type="submit"]');
+  1321	            if (submitButton) {
+  1322	                const originalText = submitButton.textContent;
+  1323	                submitButton.textContent = 'Sending...';
+  1324	                submitButton.disabled = true;
+  1325	                
+  1326	                setTimeout(() => {
+  1327	                    submitButton.textContent = originalText;
+  1328	                    submitButton.disabled = false;
+  1329	                }, 3000);
+  1330	            }
+  1331	        });
+  1332	    });
+  1333	    
+  1334	    // Console welcome message
+  1335	    console.log('%c🌟 Welcome to Creative Momentum! 🌟', 'color: #d4a574; font-size: 16px; font-weight: bold;');
+  1336	    console.log('%cBuilt with care for sensitive creatives', 'color: #7a7a7a; font-size: 14px;');
+  1337	    
+  1338	});
+  1339	</script>
+  1340	
+  1341	</body>
+  1342	</html>
