@@ -537,4 +537,806 @@ body {
 
 .reviews-grid {
     display: grid;
-    grid-template-columns:
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: #f7f5f3;
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid rgba(212, 165, 116, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: rgba(212, 165, 116, 0.3);
+}
+
+.review-card .stars {
+    display: flex;
+    gap: 0.2rem;
+    margin-bottom: 1rem;
+    color: #fbbf24;
+}
+
+.review-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.reviewer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.reviewer-info strong {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.reviewer-info span {
+    color: #7a7a7a;
+    font-size: 0.9rem;
+}
+
+/* ===== DOWNLOAD SECTION ===== */
+.download-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+}
+
+.download-section h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.download-intro {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.guide-value h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.value-items {
+    margin-bottom: 2rem;
+}
+
+.value-item {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.pricing {
+    margin: 2rem 0;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #d4a574;
+    margin-bottom: 0.5rem;
+}
+
+.price-note {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.download-ctas {
+    margin-bottom: 1rem;
+}
+
+.cta-button.large {
+    padding: 20px 40px;
+    font-size: 1.1rem;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.guarantee {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+}
+
+.guarantee i {
+    margin-right: 0.5rem;
+    color: #d4a574;
+}
+
+.download-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide-preview {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.guide-preview:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #4a453e;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #d4a574;
+}
+
+.footer-brand p {
+    color: #c7c2bd;
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer-links a {
+    color: #c7c2bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d4a574;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #665e57;
+    color: #c7c2bd;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .movement-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .movement-values {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .freebie-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .download-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links a:not(.nav-cta) {
+        display: none;
+    }
+    
+    .mobile-menu-button {
+        display: block;
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .guide-section,
+    .movement-section,
+    .download-section,
+    .freebie-section {
+        padding: 60px 0;
+    }
+    
+    .movement-values {
+        grid-template-columns: 1fr;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-content {
+        padding: 0 15px;
+    }
+    
+    .hero-content,
+    .footer-content {
+        padding: 0 15px;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .guide-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .ml-form-wrapper {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Creative Momentum</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#guide">The Guide</a>
+                <a href="#movement">Our Movement</a>
+                <a href="#freebie">Free Completion Plan</a>
+                <a href="#download" class="cta-button nav-cta">Full Guide</a>
+            </div>
+            <button class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="guide-badge">PDF DOWNLOAD</div>
+                    <h1>Finish without burning out.</h1>
+                    <p>A creative guide for the sensitive, ambitious, and stuck.</p>
+                    
+                    <p class="hero-subtext">
+                        How to Overcome Perfectionism as a Sensitive Creative is a step-by-step digital guide for 
+                        sensitive and neurodivergent creatives who start projects but rarely finish them.
+                    </p>
+                    
+                    <div class="hero-ctas">
+                        <a href="#freebie" class="cta-button secondary">Start with Free Worksheet</a>
+                        <a href="#download" class="cta-button primary">Get Full Guide</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://gfrxhozi.gensparkspace.com/assets/ebook-cover-clean.jpg" alt="How to Overcome Perfectionism as a Sensitive Creative Guide Cover" class="guide-cover">
+                </div>
+            </div>
+        </section>
+
+        <section id="guide" class="guide-section">
+            <div class="section-content">
+                <h2>What you'll get in this guide:</h2>
+                
+                <div class="guide-features">
+                    <div class="feature">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Worksheets and reflection prompts</h3>
+                        <p>Practical exercises to help you understand your creative patterns and breakthrough blocks.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-volume-mute"></i>
+                        <h3>Tools to quiet the inner critic</h3>
+                        <p>Evidence-based strategies to manage perfectionist thinking and self-doubt.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-turtle"></i>
+                        <h3>Permission to move at your own pace — and still finish</h3>
+                        <p>Sustainable methods that work with your sensitivity, not against it.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <h3>A trauma-aware completion framework</h3>
+                        <p>Gentle approaches that honor your nervous system and creative process.</p>
+                    </div>
+                </div>
+                
+                <div class="guide-ctas">
+                    <a href="#freebie" class="cta-button secondary">Start with Free Worksheet</a>
+                    <a href="#download" class="cta-button primary">Get Full Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="movement" class="movement-section">
+            <div class="section-content">
+                <div class="movement-content">
+                    <div class="movement-text">
+                        <h2>Our Movement</h2>
+                        <p class="movement-intro">
+                            We're building a community of sensitive and neurodivergent creatives who refuse to let perfectionism steal their dreams.
+                        </p>
+                        
+                        <div class="movement-values">
+                            <div class="value-item">
+                                <i class="fas fa-seedling"></i>
+                                <span>Growth over perfection</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-users"></i>
+                                <span>Community over competition</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Compassion over criticism</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-rocket"></i>
+                                <span>Progress over perfection</span>
+                            </div>
+                        </div>
+                        
+                        <p class="movement-quote">
+                            "Done is better than perfect, and imperfect action creates more momentum than perfect inaction."
+                        </p>
+                    </div>
+                    
+                    <div class="movement-visual">
+                        <img src="https://gfrxhozi.gensparkspace.com/assets/neon-sign.jpg" alt="It's gonna NOT be okay - Creative authenticity" class="neon-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="freebie" class="freebie-section">
+            <div class="section-content">
+                <div class="freebie-content">
+                    <div class="freebie-image">
+                        <img src="https://gfrxhozi.gensparkspace.com/assets/completion-plan-preview.png" alt="Creative Completion Plan Preview" class="completion-preview">
+                    </div>
+                    
+                    <div class="freebie-text">
+                        <div class="freebie-badge">FREE WORKSHEET</div>
+                        <h2>Creative Completion Plan</h2>
+                        <p class="freebie-description">
+                            Get our most popular worksheet that helps you map out your project from start to finish, 
+                            with built-in flexibility for your sensitive creative process.
+                        </p>
+                        
+                        <div class="freebie-features">
+                            <div class="feature-item">✨ Project breakdown templates</div>
+                            <div class="feature-item">🎯 Gentle goal-setting framework</div>
+                            <div class="feature-item">🛡️ Perfectionism checkpoints</div>
+                            <div class="feature-item">💝 Self-compassion reminders</div>
+                        </div>
+                        
+                        <div class="ml-form-wrapper">
+                            <div class="ml-form-container">
+                                <div class="ml-form" id="form_1234567">
+                                    <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/abc123" method="post" target="_blank">
+                                        <div class="ml-form-formContent">
+                                            <div class="ml-form-fieldRow">
+                                                <div class="ml-field-group ml-field-name">
+                                                    <input type="text" name="fields[name]" placeholder="Your name" required>
+                                                </div>
+                                                <div class="ml-field-group ml-field-email">
+                                                    <input type="email" name="fields[email]" placeholder="Your email" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ml-form-buttons">
+                                            <button type="submit" class="cta-button primary">
+                                                Get Free Completion Plan
+                                            </button>
+                                        </div>
+                                        <input type="hidden" name="ml-submit" value="1">
+                                        <div style="display: none;">
+                                            <input type="text" name="fields[gdpr_compliance]" tabindex="-1" value="" autocomplete="off">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <div class="section-content">
+                <h2>What creatives are saying</h2>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"This guide finally gave me permission to work at my own pace. I've finished more projects in the last three months than I did all last year."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-info">
+                                <strong>Sarah M.</strong>
+                                <span>Freelance Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"As someone with ADHD and anxiety, traditional productivity advice never worked for me. This approach is different - it actually gets how our brains work."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-info">
+                                <strong>Alex Chen</strong>
+                                <span>Content Creator</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"The trauma-informed approach made all the difference. I can now start projects without the overwhelming fear that I won't finish them."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-info">
+                                <strong>Maya Rodriguez</strong>
+                                <span>Artist & Writer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Finally, a guide that doesn't shame you for being 'slow' or 'perfectionist.' It celebrates sensitivity as a creative strength."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-info">
+                                <strong>Jordan Kim</strong>
+                                <span>Photographer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"The worksheets alone are worth the price. I keep coming back to the completion framework for every new project."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-info">
+                                <strong>Taylor Brooks</strong>
+                                <span>UX Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"This isn't just about productivity - it's about healing your relationship with creativity. Life-changing."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-info">
+                                <strong>Riley Martinez</strong>
+                                <span>Musician</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download-section">
+            <div class="section-content">
+                <div class="download-content">
+                    <div class="download-text">
+                        <h2>Ready to finish what you start?</h2>
+                        <p class="download-intro">
+                            Transform your creative process with this comprehensive guide designed specifically 
+                            for sensitive and neurodivergent creatives.
+                        </p>
+                        
+                        <div class="guide-value">
+                            <h3>Inside the guide:</h3>
+                            <div class="value-items">
+                                <div class="value-item">✨ 30+ pages of actionable strategies</div>
+                                <div class="value-item">📋 4 practical worksheets</div>
+                                <div class="value-item">🎯 Trauma-informed completion framework</div>
+                                <div class="value-item">💝 Self-compassion tools</div>
+                                <div class="value-item">🛡️ Perfectionism management techniques</div>
+                                <div class="value-item">⚡ Energy management for sensitive creatives</div>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing">
+                            <div class="price">$17</div>
+                            <div class="price-note">One-time payment • Instant download • Lifetime access</div>
+                        </div>
+                        
+                        <div class="download-ctas">
+                            <a href="https://cadetcreative.lemonsqueezy.com/buy/857fc909-690d-4508-bb53-7b88223bb3c5?embed=1" class="cta-button primary large lemonsqueezy-button">
+                                Get Full Guide
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="download-image">
+                        <img src="https://gfrxhozi.gensparkspace.com/assets/ebook-cover-clean.jpg" alt="How to Overcome Perfectionism as a Sensitive Creative Guide" class="guide-preview">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Creative Momentum</h3>
+                <p>Supporting sensitive creatives in finishing what they start.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#guide">The Guide</a>
+                <a href="#movement">Our Movement</a>
+                <a href="#freebie">Free Resources</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Creative Momentum. Made with care for sensitive creatives.</p>
+        </div>
+    </footer>
+
+<!-- LemonSqueezy Integration -->
+<script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+
+<script>
+// ===== EMBEDDED JAVASCRIPT =====
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // ===== SMOOTH SCROLLING =====
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 80;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // ===== NAVBAR SCROLL EFFECT =====
+    const navbar = document.querySelector('.navbar');
+    
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    }
+    
+    // ===== MOBILE NAVIGATION =====
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const navLinksContainer = document.querySelector('.nav-links');
+    
+    if (mobileMenuButton && navLinksContainer) {
+        // Add mobile styles
+        const mobileStyles = document.createElement('style');
+        mobileStyles.innerHTML = `
+            @media (max-width: 768px) {
+                .nav-links {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background: white;
+                    flex-direction: column;
+                    padding: 20px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-100%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease;
+                    z-index: 999;
+                }
+                .nav-links.active {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .nav-links a {
+                    display: block !important;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #f3f4f6;
+                }
+                .nav-links a:last-child {
+                    border-bottom: none;
+                }
+            }
+        `;
+        document.head.appendChild(mobileStyles);
+        
+        // Mobile menu toggle
+        mobileMenuButton.addEventListener('click', function() {
+            navLinksContainer.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (navLinksContainer.classList.contains('active')) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+        });
+        
+        // Close mobile menu when clicking links
+        navLinksContainer.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                navLinksContainer.classList.remove('active');
+                mobileMenuButton.querySelector('i').className = 'fas fa-bars';
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuButton.contains(e.target) && !navLinksContainer.contains(e.target)) {
+                navLinksContainer.classList.remove('active');
+                mobileMenuButton.querySelector('i').className = 'fas fa-bars';
+            }
+        });
+    }
+    
+    // ===== ENHANCED INTERACTIVITY =====
+    
+    // Add hover effects to CTA buttons
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            if (!this.style.transform.includes('translateY')) {
+                this.style.transform = 'translateY(-3px)';
+            }
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // ===== SCROLL ANIMATIONS =====
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.feature, .value-item, .review-card');
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+    
+    // ===== FORM ENHANCEMENTS =====
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            const submitButton = this.querySelector('button[type="submit"]');
+            if (submitButton) {
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                }, 3000);
+            }
+        });
+    });
+    
+    // Console welcome message
+    console.log('%c🌟 Welcome to Creative Momentum! 🌟', 'color: #d4a574; font-size: 16px; font-weight: bold;');
+    console.log('%cBuilt with care for sensitive creatives', 'color: #7a7a7a; font-size: 14px;');
+    
+});
+</script>
+
+</body>
+</html>
